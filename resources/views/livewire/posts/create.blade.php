@@ -1,5 +1,5 @@
 <div>
-    <x-flash-message></x-flash-message>
+    <x-flash-message/>
 
     <div class="card">
         <div class="card-body">
@@ -20,7 +20,7 @@
                     @enderror
                 </div>
 
-                <button class="btn btn-outline-warning fw-bold">Save</button>
+                <button class="btn btn-outline-warning fw-bold"><i class="bi bi-save pe-1"></i> Save</button>
             </form>
         </div>
     </div>

@@ -2,9 +2,9 @@
 
 namespace App\Livewire\Forms;
 
-use Livewire\Form;
-use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Rule;
+use Livewire\Form;
 
 class PostForm extends Form
 {
@@ -16,13 +16,11 @@ class PostForm extends Form
 
     public function store(): void
     {
-        $user = User::find(1);
-
-        $user->posts()->create(
+        Auth::user()->posts()->create(
             $this->validate()
         );
 
-        flash('Post created successfully', 'warning');
+        flash('Post created successfully', 'success');
         $this->reset();
     }
 }
