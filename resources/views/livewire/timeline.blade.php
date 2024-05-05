@@ -4,6 +4,6 @@
     </div>
 
     <div class="col-md-6">
-        <livewire:posts.timeline :lazy="false" />
+        <livewire:posts.timeline :lazy="true" />
     </div>
 </div>

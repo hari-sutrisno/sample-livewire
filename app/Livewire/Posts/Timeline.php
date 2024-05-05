@@ -8,8 +8,8 @@ use Livewire\Attributes\On;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Posts')]
 #[Lazy]
+#[Title('Posts')]
 
 class Timeline extends Component
 {
@@ -23,7 +23,7 @@ class Timeline extends Component
 
     public function render()
     {
-        sleep(2);
+        //sleep(2);
 
         $posts = Post::query()->with('user')->latest()->get();
         return view('livewire.posts.timeline-post', [
